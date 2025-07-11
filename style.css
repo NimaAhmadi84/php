@@ -1,0 +1,229 @@
+/* فایل style.css */
+
+/* 🔹 Reset اولیه برای همه تگ‌ها */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 تنظیم فونت و رنگ کلی برای body */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    direction: rtl;
+    text-align: right;
+    padding: 0;
+}
+/* === Header === */
+header {
+    background-color: #343a40; /* رنگ تیره برای هدر */
+    color: #ffffff;             /* رنگ نوشته سفید */
+    padding: 20px;
+    text-align: center;
+}
+
+/* عنوان اصلی در هدر */
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* === Navigation === */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* تا وقتی فضا کم شد، بشکنه */
+}
+
+
+/* هر آیتم از منو */
+nav ul li a {
+    text-decoration: none;    /* حذف زیرخط */
+    color: #ffffff;
+    background-color: #495057;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* افکت هاور */
+nav ul li a:hover {
+    background-color: #6c757d;
+}
+/* === بخش کلی مقالات === */
+main {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+/* تگ section که مقالات توشه */
+section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* عنوان بخش مقالات */
+section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #198754;
+}
+
+/* هر مقاله */
+article {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* تیتر مقاله */
+article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* متن مقاله */
+article p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+/* === Footer === */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* عنوان بخش نظرات */
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f8d7da;
+}
+
+/* فرم نظرات */
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* ورودی نظر */
+footer input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+footer form label {
+    font-size: 16px;
+    color: #f1f1f1;
+    text-align: right;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* دکمه ارسال */
+footer button {
+    background-color: #198754;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* افکت هاور روی دکمه */
+footer button:hover {
+    background-color: #146c43;
+}
+
+/* متن پایانی */
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+/* === نمایش نظرات در فوتر === */
+footer .comments {
+    background-color: #212529;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+footer .comments h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffc107; /* زرد جذاب */
+}
+
+footer .comments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .comments li {
+    background-color: #343a40;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+/* 🎯 Media Query برای موبایل */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+    nav ul {
+        gap: 10px; /* فاصله بین آیتم‌ها کمتر */
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px; /* کوچک‌تر کردن فضای دکمه‌ها */
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    footer form {
+        width: 100%;
+    }
+
+    footer input[type="text"] {
+        max-width: 90%;
+    }
+
+    footer form label {
+        max-width: 90%;
+    }
+
+    footer button {
+        width: 90%;
+    }
+}
